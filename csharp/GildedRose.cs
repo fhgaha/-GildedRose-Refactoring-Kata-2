@@ -18,7 +18,7 @@ namespace csharp
             }
         }
 
-        private static void DoStuff(Item item)
+        private void DoStuff(Item item)
         {
             if (item.Name == "Aged Brie")
             {
@@ -29,6 +29,7 @@ namespace csharp
 
             }
             DosStuff2(item);
+            return;
         }
 
         private static void DosStuff2(Item item)
