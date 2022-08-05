@@ -22,17 +22,17 @@ namespace csharp
         {
             if (item.Name == "Aged Brie")
             {
-
+                DosStuff2(item);
+                return;
             }
             else
             {
-
+                DosStuff2(item);
+                return;
             }
-            DosStuff2(item);
-            return;
         }
 
-        private static void DosStuff2(Item item)
+        private void DosStuff2(Item item)
         {
             if (item.Name != "Aged Brie" && item.Name != "Backstage passes to a TAFKAL80ETC concert")
             {
