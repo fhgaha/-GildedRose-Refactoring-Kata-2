@@ -20,6 +20,11 @@ namespace csharp
 
         private static void DoStuff(Item item)
         {
+            DosStuff2(item);
+        }
+
+        private static void DosStuff2(Item item)
+        {
             if (item.Name != "Aged Brie" && item.Name != "Backstage passes to a TAFKAL80ETC concert")
             {
                 if (item.Quality > 0)
