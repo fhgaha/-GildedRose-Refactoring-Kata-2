@@ -38,11 +38,11 @@ namespace csharp
                 return;
             }
 
-            //if (item.Name.Contains("Conjured"))
-            //{
-            //    UpdateDefault(item, 2);
-            //    return;
-            //}
+            if (item.Name.Contains("Conjured"))
+            {
+                UpdateDefault(item, 2);
+                return;
+            }
 
             UpdateDefault(item, 1);
             return;
