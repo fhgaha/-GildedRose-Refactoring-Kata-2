@@ -41,10 +41,7 @@ namespace csharp
             {
                 if (item.Quality > 0)
                 {
-                    if (true)
-                    {
-                        item.Quality = item.Quality - 1;
-                    }
+                    item.Quality = item.Quality - 1;
                 }
 
                 item.SellIn = item.SellIn - 1;
