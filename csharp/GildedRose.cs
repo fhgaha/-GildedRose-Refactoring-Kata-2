@@ -32,6 +32,34 @@ namespace csharp
                 UpdateBackstagePasses(item);
                 return;
             }
+
+            if (item.Name == "Sulfuras, Hand of Ragnaros")
+            {
+                if (item.Quality > 0)
+                {
+                    if (item.Name != "Sulfuras, Hand of Ragnaros")
+                    {
+                        item.Quality = item.Quality - 1;
+                    }
+                }
+
+                if (item.Name != "Sulfuras, Hand of Ragnaros")
+                {
+                    item.SellIn = item.SellIn - 1;
+                }
+
+                if (item.SellIn < 0)
+                {
+                    if (item.Quality > 0)
+                    {
+                        if (item.Name != "Sulfuras, Hand of Ragnaros")
+                        {
+                            item.Quality = item.Quality - 1;
+                        }
+                    }
+                }
+                return;
+            }
             else
             {
                 if (item.Quality > 0)
