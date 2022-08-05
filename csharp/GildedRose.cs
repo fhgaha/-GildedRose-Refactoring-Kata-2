@@ -39,13 +39,11 @@ namespace csharp
                 {
                     if (item.Name != "Sulfuras, Hand of Ragnaros")
                     {
-                        item.Quality = item.Quality - 1;
                     }
                 }
 
                 if (item.Name != "Sulfuras, Hand of Ragnaros")
                 {
-                    item.SellIn = item.SellIn - 1;
                 }
 
                 if (item.SellIn < 0)
@@ -54,7 +52,6 @@ namespace csharp
                     {
                         if (item.Name != "Sulfuras, Hand of Ragnaros")
                         {
-                            item.Quality = item.Quality - 1;
                         }
                     }
                 }
