@@ -14,24 +14,24 @@ namespace csharp
     [TestFixture]
     public class ApprovalTest
     {
-        //[Test]
-        //public void ThirtyDays()
-        //{
-        //    StringBuilder fakeoutput = new StringBuilder();
-        //    Console.SetOut(new StringWriter(fakeoutput));
-        //    Console.SetIn(new StringReader("a\n"));
+        [Test]
+        public void ThirtyDays()
+        {
+            StringBuilder fakeoutput = new StringBuilder();
+            Console.SetOut(new StringWriter(fakeoutput));
+            Console.SetIn(new StringReader("a\n"));
 
-        //    Program.Main(new string[] { });
-        //    var output = fakeoutput.ToString();
+            Program.Main(new string[] { });
+            var output = fakeoutput.ToString();
 
-        //    Approvals.Verify(output);
-        //}
+            Approvals.Verify(output);
+        }
 
         [Test]
         public void foo()
         {
-            string[] names = new string[] 
-            { 
+            string[] names = new string[]
+            {
                 "foo",
                 "Aged Brie",
                 "Backstage passes to a TAFKAL80ETC concert",
@@ -51,5 +51,11 @@ namespace csharp
             string result = app.Items[0].ToString();
             return result;
         }
+
+        //[Test]
+        //public void Conjured()
+        //{
+        //    Approvals.Verify(DoStuff, "Conjured Pot")
+        //}
     }
 }

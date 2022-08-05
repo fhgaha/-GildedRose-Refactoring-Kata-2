@@ -37,16 +37,22 @@ namespace csharp
             {
                 return;
             }
-         
-            UpdateDefault(item);
+
+            //if (item.Name.Contains("Conjured"))
+            //{
+            //    UpdateDefault(item, 2);
+            //    return;
+            //}
+
+            UpdateDefault(item, 1);
             return;
         }
 
-        private static void UpdateDefault(Item item)
+        private static void UpdateDefault(Item item, int degradeAmount)
         {
             if (item.Quality > 0)
             {
-                item.Quality = item.Quality - 1;
+                item.Quality = item.Quality - degradeAmount;
             }
 
             item.SellIn = item.SellIn - 1;
@@ -55,7 +61,7 @@ namespace csharp
             {
                 if (item.Quality > 0)
                 {
-                    item.Quality = item.Quality - 1;
+                    item.Quality = item.Quality - degradeAmount;
                 }
             }
         }

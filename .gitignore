@@ -7,3 +7,4 @@ vendor
 *.iml
 /csharp/ApprovalTest.foo.received.txt
 /csharp/ApprovalTest.foo.approved.txt
+/csharp/ApprovalTest.ThirtyDays.approved.txt
