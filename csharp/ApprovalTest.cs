@@ -28,11 +28,17 @@ namespace csharp
         [Test]
         public void foo()
         {
+            string result = DoStuff();
+            Approvals.Verify(result);
+        }
+
+        private static string DoStuff()
+        {
             IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
             string result = app.Items[0].ToString();
-            Approvals.Verify(result);
+            return result;
         }
     }
 }
