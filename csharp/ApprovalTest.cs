@@ -29,7 +29,7 @@ namespace csharp
         [Test]
         public void foo()
         {
-            string[] names = new string[] { "foo" };
+            string[] names = new string[] { "foo", "Aged Brie" };
             CombinationApprovals.VerifyAllCombinations(DoStuff, names);
         }
 
