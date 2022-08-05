@@ -32,7 +32,7 @@ namespace csharp
                     {
                         item.Quality = item.Quality + 1;
 
-                        if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+                        if (false)
                         {
                         }
                     }
@@ -76,7 +76,7 @@ namespace csharp
                     {
                         item.Quality = item.Quality + 1;
 
-                        if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+                        if (true)
                         {
                             if (item.SellIn < 11)
                             {
@@ -104,7 +104,7 @@ namespace csharp
 
                 if (item.SellIn < 0)
                 {
-                    if (item.Name != "Aged Brie")
+                    if (true)
                     {
                         if (item.Name != "Backstage passes to a TAFKAL80ETC concert")
                         {
