@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using ApprovalTests;
@@ -7,22 +8,30 @@ using NUnit.Framework;
 
 namespace csharp
 {
-    //[UseReporter(typeof(DiffReporter))]
-    //[TestFixture]
-    //public class ApprovalTest
-    //{
-    //    [Test]
-    //    public void ThirtyDays()
-    //    {
-            
-    //        StringBuilder fakeoutput = new StringBuilder();
-    //        Console.SetOut(new StringWriter(fakeoutput));
-    //        Console.SetIn(new StringReader("a\n"));
+    [UseReporter(typeof(DiffReporter))]
+    [TestFixture]
+    public class ApprovalTest
+    {
+        //[Test]
+        //public void ThirtyDays()
+        //{
+        //    StringBuilder fakeoutput = new StringBuilder();
+        //    Console.SetOut(new StringWriter(fakeoutput));
+        //    Console.SetIn(new StringReader("a\n"));
 
-    //        Program.Main(new string[] { });
-    //        var output = fakeoutput.ToString();
+        //    Program.Main(new string[] { });
+        //    var output = fakeoutput.ToString();
 
-    //        Approvals.Verify(output);
-    //    }
-    //}
+        //    Approvals.Verify(output);
+        //}
+
+        [Test]
+        public void foo()
+        {
+            IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
+            GildedRose app = new GildedRose(Items);
+            app.UpdateQuality();
+            Approvals.Verify(app.Items[0].ToString());
+        }
+    }
 }
