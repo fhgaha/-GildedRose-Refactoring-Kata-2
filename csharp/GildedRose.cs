@@ -20,6 +20,14 @@ namespace csharp
 
         private static void DoStuff(Item item)
         {
+            if (item.Name == "Aged Brie")
+            {
+
+            }
+            else
+            {
+
+            }
             DosStuff2(item);
         }
 
