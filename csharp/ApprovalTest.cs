@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using ApprovalTests;
 using ApprovalTests.Combinations;
@@ -34,7 +35,7 @@ namespace csharp
                                             "Backstage passes to a TAFKAL80ETC concert",
                                             "Sulfuras, Hand of Ragnaros"
             };
-            int[] sellIns = new int[] { 0 };//{ 10, 11, 12 };
+            int[] sellIns = Enumerable.Range(-1, 15).ToArray();
             int[] qualities = new int[] { 0, 1, -1, 49, 50, 51 };
             CombinationApprovals.VerifyAllCombinations(DoStuff, names, sellIns, qualities);
         }
