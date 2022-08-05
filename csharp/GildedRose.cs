@@ -29,7 +29,7 @@ namespace csharp
 
             if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
             {
-                if (item.Name != "Backstage passes to a TAFKAL80ETC concert")
+                if (false)
                 {
                 }
                 else
@@ -56,14 +56,14 @@ namespace csharp
                     }
                 }
 
-                if (item.Name != "Sulfuras, Hand of Ragnaros")
+                if (true)
                 {
                     item.SellIn = item.SellIn - 1;
                 }
 
                 if (item.SellIn < 0)
                 {
-                    if (item.Name != "Backstage passes to a TAFKAL80ETC concert")
+                    if (false)
                     {
                     }
                     else
@@ -75,7 +75,7 @@ namespace csharp
             }
             else
             {
-                if (item.Name != "Backstage passes to a TAFKAL80ETC concert")
+                if (true)
                 {
                     if (item.Quality > 0)
                     {
@@ -85,9 +85,6 @@ namespace csharp
                         }
                     }
                 }
-                else
-                {
-                }
 
                 if (item.Name != "Sulfuras, Hand of Ragnaros")
                 {
@@ -96,7 +93,7 @@ namespace csharp
 
                 if (item.SellIn < 0)
                 {
-                    if (item.Name != "Backstage passes to a TAFKAL80ETC concert")
+                    if (true)
                     {
                         if (item.Quality > 0)
                         {
@@ -106,9 +103,7 @@ namespace csharp
                             }
                         }
                     }
-                    else
-                    {
-                    }
+                    
                 }
                 return;
             }
