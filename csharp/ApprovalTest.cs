@@ -10,7 +10,7 @@ namespace csharp
 {
     [UseReporter(typeof(DiffReporter))]
     [TestFixture]
-    public class ApprovalTest
+    public class ApprovalTest 
     {
         //[Test]
         //public void ThirtyDays()
@@ -31,7 +31,8 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Approvals.Verify(app.Items[0].ToString());
+            string result = app.Items[0].ToString();
+            Approvals.Verify(result);
         }
     }
 }
