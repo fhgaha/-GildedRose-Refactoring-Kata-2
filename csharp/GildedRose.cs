@@ -45,7 +45,7 @@ namespace csharp
 
                 if (item.SellIn < 0)
                 {
-                    if (item.Name != "Aged Brie")
+                    if (false)
                     {
                     }
                     else
@@ -60,7 +60,7 @@ namespace csharp
             }
             else
             {
-                if (item.Name != "Aged Brie" && item.Name != "Backstage passes to a TAFKAL80ETC concert")
+                if (true && item.Name != "Backstage passes to a TAFKAL80ETC concert")
                 {
                     if (item.Quality > 0)
                     {
