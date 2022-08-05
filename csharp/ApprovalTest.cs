@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using ApprovalTests;
+using ApprovalTests.Combinations;
 using ApprovalTests.Reporters;
 using NUnit.Framework;
 
@@ -28,8 +29,8 @@ namespace csharp
         [Test]
         public void foo()
         {
-            string result = DoStuff("foo");
-            Approvals.Verify(result);
+            string[] names = new string[] { "foo" };
+            CombinationApprovals.VerifyAllCombinations(DoStuff, names);
         }
 
         private static string DoStuff(string name)
