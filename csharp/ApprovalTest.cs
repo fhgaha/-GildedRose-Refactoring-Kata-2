@@ -30,13 +30,16 @@ namespace csharp
         [Test]
         public void foo()
         {
-            string[] names = new string[] { "foo",
-                                            "Aged Brie",
-                                            "Backstage passes to a TAFKAL80ETC concert",
-                                            "Sulfuras, Hand of Ragnaros"
+            string[] names = new string[] 
+            { 
+                "foo",
+                "Aged Brie",
+                "Backstage passes to a TAFKAL80ETC concert",
+                "Sulfuras, Hand of Ragnaros"
             };
             int[] sellIns = Enumerable.Range(-1, 15).ToArray();
             int[] qualities = new int[] { 0, 1, -1, 49, 50, 51 };
+
             CombinationApprovals.VerifyAllCombinations(DoStuff, names, sellIns, qualities);
         }
 
