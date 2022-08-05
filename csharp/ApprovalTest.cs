@@ -34,7 +34,7 @@ namespace csharp
                                             "Backstage passes to a TAFKAL80ETC concert",
                                             "Sulfuras, Hand of Ragnaros"
             };
-            int[] qualities = new int[] { 0, 1, -1 };
+            int[] qualities = new int[] { 0, 1, -1, 49, 50, 51 };
             CombinationApprovals.VerifyAllCombinations(DoStuff, names, qualities);
         }
 
