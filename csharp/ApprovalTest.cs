@@ -30,12 +30,13 @@ namespace csharp
         public void foo()
         {
             string[] names = new string[] { "foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" };
-            CombinationApprovals.VerifyAllCombinations(DoStuff, names);
+            int[] qualities = new int[] { 0 };
+            CombinationApprovals.VerifyAllCombinations(DoStuff, names, qualities);
         }
 
-        private static string DoStuff(string name)
+        private static string DoStuff(string name, int quality)
         {
-            IList<Item> Items = new List<Item> { new Item { Name = name, SellIn = 0, Quality = 0 } };
+            IList<Item> Items = new List<Item> { new Item { Name = name, SellIn = 0, Quality = quality } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
             string result = app.Items[0].ToString();
