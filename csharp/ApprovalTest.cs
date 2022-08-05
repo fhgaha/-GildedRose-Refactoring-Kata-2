@@ -34,13 +34,14 @@ namespace csharp
                                             "Backstage passes to a TAFKAL80ETC concert",
                                             "Sulfuras, Hand of Ragnaros"
             };
+            int[] sellIns = new int[] { 0 };//{ 10, 11, 12 };
             int[] qualities = new int[] { 0, 1, -1, 49, 50, 51 };
-            CombinationApprovals.VerifyAllCombinations(DoStuff, names, qualities);
+            CombinationApprovals.VerifyAllCombinations(DoStuff, names, sellIns, qualities);
         }
 
-        private static string DoStuff(string name, int quality)
+        private static string DoStuff(string name, int sellIn, int quality)
         {
-            IList<Item> Items = new List<Item> { new Item { Name = name, SellIn = 0, Quality = quality } };
+            IList<Item> Items = new List<Item> { new Item { Name = name, SellIn = sellIn, Quality = quality } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
             string result = app.Items[0].ToString();
