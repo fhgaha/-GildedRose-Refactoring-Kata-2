@@ -7,22 +7,22 @@ using NUnit.Framework;
 
 namespace csharp
 {
-    [UseReporter(typeof(DiffReporter))]
-    [TestFixture]
-    public class ApprovalTest
-    {
-        [Test]
-        public void ThirtyDays()
-        {
+    //[UseReporter(typeof(DiffReporter))]
+    //[TestFixture]
+    //public class ApprovalTest
+    //{
+    //    [Test]
+    //    public void ThirtyDays()
+    //    {
             
-            StringBuilder fakeoutput = new StringBuilder();
-            Console.SetOut(new StringWriter(fakeoutput));
-            Console.SetIn(new StringReader("a\n"));
+    //        StringBuilder fakeoutput = new StringBuilder();
+    //        Console.SetOut(new StringWriter(fakeoutput));
+    //        Console.SetIn(new StringReader("a\n"));
 
-            Program.Main(new string[] { });
-            var output = fakeoutput.ToString();
+    //        Program.Main(new string[] { });
+    //        var output = fakeoutput.ToString();
 
-            Approvals.Verify(output);
-        }
-    }
+    //        Approvals.Verify(output);
+    //    }
+    //}
 }
