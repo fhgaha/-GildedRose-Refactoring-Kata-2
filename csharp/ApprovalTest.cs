@@ -11,7 +11,7 @@ namespace csharp
 {
     [UseReporter(typeof(DiffReporter))]
     [TestFixture]
-    public class ApprovalTest 
+    public class ApprovalTest
     {
         //[Test]
         //public void ThirtyDays()
@@ -29,7 +29,11 @@ namespace csharp
         [Test]
         public void foo()
         {
-            string[] names = new string[] { "foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" };
+            string[] names = new string[] { "foo",
+                                            "Aged Brie",
+                                            "Backstage passes to a TAFKAL80ETC concert",
+                                            "Sulfuras, Hand of Ragnaros"
+            };
             int[] qualities = new int[] { 0, 1, -1 };
             CombinationApprovals.VerifyAllCombinations(DoStuff, names, qualities);
         }
