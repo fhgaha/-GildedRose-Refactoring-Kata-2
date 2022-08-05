@@ -30,7 +30,7 @@ namespace csharp
         public void foo()
         {
             string[] names = new string[] { "foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" };
-            int[] qualities = new int[] { 0 };
+            int[] qualities = new int[] { 0, 1, -1 };
             CombinationApprovals.VerifyAllCombinations(DoStuff, names, qualities);
         }
 
